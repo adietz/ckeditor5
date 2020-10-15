@@ -29,6 +29,8 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
+import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -56,6 +58,8 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
+	TableProperties,
+	TableCellProperties,
 	TextTransformation
 ];
 
@@ -65,27 +69,44 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+			'fontfamily',
+			'fontsize',
+			'fontColor',
+			'fontBackgroundColor',
+			'|',
 			'bold',
 			'italic',
-			'link',
-			'bulletedList',
+			'underline',
+			'strikethrough',
+			'|',
+			'alignment',
+			'|',
 			'numberedList',
+			'bulletedList',
 			'|',
 			'indent',
 			'outdent',
 			'|',
+			'link',
+			'blockquote',
 			'imageUpload',
-			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
+			'|',
 			'undo',
 			'redo'
 		]
 	},
 	image: {
+		styles: [
+			'full',
+			'alignLeft',
+			'alignRight'
+		],
 		toolbar: [
+			'imageStyle:alignLeft',
 			'imageStyle:full',
-			'imageStyle:side',
+			'imageStyle:alignRight',
 			'|',
 			'imageTextAlternative'
 		]
@@ -94,7 +115,9 @@ ClassicEditor.defaultConfig = {
 		contentToolbar: [
 			'tableColumn',
 			'tableRow',
-			'mergeTableCells'
+			'mergeTableCells',
+			'tableProperties',
+			'tableCellProperties'
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
