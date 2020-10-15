@@ -40,6 +40,8 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import TableWidthCommand from '@ckeditor/ckeditor5-table/src/tableproperties/commands/tablewidthcommand';
+import TableHeightCommand from '@ckeditor/ckeditor5-table/src/tableproperties/commands/tableheightcommand';
 
 export default class DecoupledEditor extends DecoupledEditorBase {
 }
@@ -79,6 +81,8 @@ DecoupledEditor.builtinPlugins = [
 	TableToolbar,
 	TableProperties,
 	TableCellProperties,
+	TableWidthCommand,
+	TableHeightCommand,
 	TextTransformation
 ];
 
