@@ -31,16 +31,32 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
+import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
+import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
+import ListStyle from '@ckeditor/ckeditor5-list/src/liststyle';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
 	Essentials,
+	Alignment,
+	FontSize,
+	FontFamily,
+	FontColor,
+	FontBackgroundColor,
 	UploadAdapter,
 	Autoformat,
 	Bold,
 	Italic,
+	Strikethrough,
+	Underline,
 	BlockQuote,
 	CKFinder,
 	EasyImage,
@@ -51,8 +67,10 @@ ClassicEditor.builtinPlugins = [
 	ImageToolbar,
 	ImageUpload,
 	Indent,
+	IndentBlock,
 	Link,
 	List,
+	ListStyle,
 	MediaEmbed,
 	Paragraph,
 	PasteFromOffice,
