@@ -1,6 +1,6 @@
 {
   "name": "@cgshealth/ckeditor5-build-classic-with-table-plugins",
-  "version": "23.0.3",
+  "version": "23.0.4",
   "description": "The classic editor build of CKEditor 5 with Table Plugins",
   "keywords": [
     "ckeditor5-build",
