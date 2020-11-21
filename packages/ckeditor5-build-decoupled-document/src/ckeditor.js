@@ -26,7 +26,7 @@ import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
-import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
+import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
 import Link from '@ckeditor/ckeditor5-link/src/link';
@@ -40,8 +40,6 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
-import TableWidthCommand from '@ckeditor/ckeditor5-table/src/tableproperties/commands/tablewidthcommand';
-import TableHeightCommand from '@ckeditor/ckeditor5-table/src/tableproperties/commands/tableheightcommand';
 
 export default class DecoupledEditor extends DecoupledEditorBase {
 }
@@ -68,7 +66,7 @@ DecoupledEditor.builtinPlugins = [
 	ImageCaption,
 	ImageStyle,
 	ImageToolbar,
-	ImageUpload,
+	ImageInsert,
 	Indent,
 	IndentBlock,
 	Link,
@@ -81,8 +79,6 @@ DecoupledEditor.builtinPlugins = [
 	TableToolbar,
 	TableProperties,
 	TableCellProperties,
-	TableWidthCommand,
-	TableHeightCommand,
 	TextTransformation
 ];
 
@@ -112,7 +108,7 @@ DecoupledEditor.defaultConfig = {
 			'|',
 			'link',
 			'blockquote',
-			'imageUpload',
+			'imageInsert',
 			'insertTable',
 			'mediaEmbed',
 			'|',
