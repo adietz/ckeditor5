@@ -1,6 +1,6 @@
 {
   "name": "@cgshealth/ckeditor5-build-decoupled-document-with-table-plugins",
-  "version": "23.0.4",
+  "version": "23.0.5",
   "description": "The document editor build of CKEditor 5 – the best browser-based rich text editor, with Table Properties and Table Cell Properties Plugins",
   "keywords": [
     "ckeditor5-build",
