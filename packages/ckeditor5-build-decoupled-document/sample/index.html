@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>CKEditor 5 – document editor build – development sample</title>
-	<style>
-		body {
-			max-width: 1000px;
-			margin: 20px auto;
-		}
-	</style>
+  <meta charset="utf-8">
+  <title>CKEditor 5 – document editor build – development sample</title>
+  <style>
+    body {
+      max-width: 1000px;
+      margin: 20px auto;
+    }
+  </style>
+  <script src="../node_modules/@ckeditor/ckeditor5-inspector/build/inspector.js"></script>
 </head>
 <body>
 
@@ -21,36 +22,36 @@
 <div class="editable-container"></div>
 
 <style>
-	.editable-container,
-	.toolbar-container {
-		position: relative;
-		border: 1px solid #ddd;
-		background: #eee;
-	}
+  .editable-container,
+  .toolbar-container {
+    position: relative;
+    border: 1px solid #ddd;
+    background: #eee;
+  }
 
-	.toolbar-container {
-		padding: 1em;
-	}
+  .toolbar-container {
+    padding: 1em;
+  }
 
-	.editable-container {
-		padding: 3em;
-		overflow-y: scroll;
-		max-height: 500px;
-	}
+  .editable-container {
+    padding: 3em;
+    overflow-y: scroll;
+    max-height: 500px;
+  }
 
-	.editable-container .document-editor__editable.ck-editor__editable {
-		min-height: 21cm;
-		padding: 2em;
-		border: 1px #D3D3D3 solid;
-		border-radius: var(--ck-border-radius);
-		background: white;
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-	}
+  .editable-container .document-editor__editable.ck-editor__editable {
+    min-height: 21cm;
+    padding: 2em;
+    border: 1px #D3D3D3 solid;
+    border-radius: var(--ck-border-radius);
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
 </style>
 
 <script src="../build/ckeditor.js"></script>
 <script>
-	const editorData = `<table><thead><tr><th>Test Col 1</th><th>Test Col 2</th></tr></thead><tbody><tr><td>1</td><td>2</td></tr></tr></thead><tbody><tr><td>3</td><td>4</td></tr></tbody>`;
+	const editorData = `<br><br><button href="https://www.google.com" target="_new" class="custom-button cta custom-button-align-left" width="80">Test Button</button><br><br><a href="https://google.com">Google</a>`;
 
 	DecoupledEditor.create( editorData )
 		.then( editor => {
@@ -58,6 +59,7 @@
 
 			document.querySelector( '.toolbar-container' ).appendChild( editor.ui.view.toolbar.element );
 			document.querySelector( '.editable-container' ).appendChild( editor.ui.view.editable.element );
+			CKEditorInspector.attach( editor );
 		} )
 		.catch( error => {
 			console.error( 'There was a problem initializing the editor.', error );

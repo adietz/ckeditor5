@@ -1,0 +1,14 @@
+button.custom-button {
+	padding: 10px;
+	display: block;
+	text-align: center;
+	background-color: hsla(240, 55%, 87%, 1);
+}
+
+button.custom-button-align-center {
+	margin: 0px auto;
+}
+
+button.custom-button-align-right {
+	margin: 0px 0px 0px auto;
+}
