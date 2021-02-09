@@ -1,6 +1,6 @@
 {
   "name": "@cgshealth/ckeditor5-build-decoupled-document-with-table-plugins",
-  "version": "23.0.7",
+  "version": "23.0.8",
   "description": "The document editor build of CKEditor 5 – the best browser-based rich text editor, with Table Properties and Table Cell Properties Plugins",
   "keywords": [
     "ckeditor5-build",
@@ -80,9 +80,5 @@
     "preversion": "npm run build",
     "watch": "webpack --mode development --watch"
   },
-  "dependencies": {
-    "@budgetthuis/ckeditor5-custom-button-element-plugin": "^1.2.5",
-    "ckeditor5-button": "^0.1.0",
-    "ckeditor5-cta-link": "^1.0.17"
-  }
+  "dependencies": {}
 }

@@ -40,8 +40,6 @@ import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
-import ButtonIcon from './button.svg';
-import CustomButtonElement from './plugins/custombuttonelement/src/custombuttonelement';
 
 export default class DecoupledEditor extends DecoupledEditorBase {
 }
@@ -52,7 +50,6 @@ DecoupledEditor.builtinPlugins = [
 	Essentials,
 	Alignment,
 	Base64UploadAdapter,
-	CustomButtonElement,
 	FontSize,
 	FontFamily,
 	FontColor,
@@ -108,8 +105,6 @@ DecoupledEditor.defaultConfig = {
 			'numberedList',
 			'bulletedList',
 			'|',
-			'customButtonElement',
-			'|',
 			'indent',
 			'outdent',
 			'|',
@@ -147,23 +142,6 @@ DecoupledEditor.defaultConfig = {
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en',
-	CustomElement: {
-		items: [
-			{
-				tag: 'cta',
-				name: 'CTA Button',
-				placeholder: 'CTA Text',
-				icon: ButtonIcon,
-				figure: true,
-				attributes: {
-					href: '',
-					class: '',
-					inline: false,
-					editable: false
-				}
-			}
-		]
-	}
+	language: 'en'
 
 };
